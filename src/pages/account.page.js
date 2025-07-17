@@ -1,4 +1,4 @@
-import {test} from '../helpers/fixture/index';
+import {test} from '../helpers/fixtures/ui.fixture';
 
 export class AccountPage {
     constructor(page){

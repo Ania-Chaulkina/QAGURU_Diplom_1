@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-//import{URL} from '../fixtures/config';
+import {API_URL} from '../helpers/fixtures/index';
 
 export class Heartbeat {
     constructor (request) {
@@ -8,7 +8,7 @@ export class Heartbeat {
 
         async getDeleteStatusCode(token) {
             return test.step('Проверяем статус кода DELETE', async () => {
-                const response = this.request.delete(`${process.env.API_URL}heartbeat`,
+                const response = this.request.delete(`${API_URL}heartbeat`,
                     {
                         headers: {
                             'x-challenger': token,

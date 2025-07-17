@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test } from '../src/fixtures/index'
+import { test } from '../src/helpers/fixtures/api.fixture'
 import {  ToDoBuilder } from '../src/helpers/builders/api.builder'
 
 

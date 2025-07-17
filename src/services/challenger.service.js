@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-//const URL = 'https://apichallenges.herokuapp.com/';
+import {API_URL} from '../helpers/fixtures/index';
 
 export class ChallengerService {
 	constructor(request) {
@@ -7,7 +7,7 @@ export class ChallengerService {
 	}
 	async post() {
 		return test.step('post /challenger', async () => {
-			const response = await this.request.post(`${process.env.API_URL}challenger`);
+			const response = await this.request.post(`${API_URL}challenger`);
 			const headers = response.headers();
             const token = headers['x-challenger'];
             return token;
