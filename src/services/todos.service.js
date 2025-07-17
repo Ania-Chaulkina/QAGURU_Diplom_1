@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-//import{URL} from '../fixtures/config';
+import {API_URL} from '../helpers/fixtures/index';
 
 export class TodosService {
     constructor(request) {
@@ -8,7 +8,7 @@ export class TodosService {
 
     async get(token, filter ='', acceptHeader) {
         return test.step('Получение списка задач', async () =>{
-            const response = this.request.get(`${process.env.API_URL}todos${filter}`, 
+            const response = this.request.get(`${API_URL}todos${filter}`, 
             {
                 headers: {
                     'x-challenger': token,
@@ -22,7 +22,7 @@ export class TodosService {
 
     async getContentType(token, acceptHeader) {
         return test.step("Получение XML,JSON", async () => {
-            const response = await this.request.get(`${process.env.API_URL}todos`, {
+            const response = await this.request.get(`${API_URL}todos`, {
                 headers: {
                     'x-challenger': token,
                     'Accept': acceptHeader,
@@ -34,7 +34,7 @@ export class TodosService {
 
     async post(token, title ='', description ='', status = '', id ='') {
         return test.step('Создаем задачу', async () => {
-            const response = await this.request.post(`${process.env.API_URL}todos${id}`, {
+            const response = await this.request.post(`${API_URL}todos${id}`, {
                     headers: {
                         'x-challenger': token,
                     },
@@ -50,7 +50,7 @@ export class TodosService {
 
     async delete(token, id) {
         return test.step("Удаляем задание", async () => {
-            const response = await this.request.delete(`${process.env.API_URL}todos/${id}`, {
+            const response = await this.request.delete(`${API_URL}todos/${id}`, {
                 headers: {
                     'x-challenger': token,
                 }

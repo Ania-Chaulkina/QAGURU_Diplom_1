@@ -1,5 +1,5 @@
-import {test} from '../helpers/fixture/index';
-import {URL} from '../helpers/fixture'
+import {test} from '../helpers/fixtures/ui.fixture';
+const URL = 'https://academybugs.com/';
 export class MainPage {
 
     constructor(page){

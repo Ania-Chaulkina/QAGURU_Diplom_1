@@ -1,4 +1,4 @@
-import {test} from '../src/helpers/fixture/index';
+import {test} from '../src/helpers/fixtures/ui.fixture';
 import { expect } from '@playwright/test';
 
 test.describe('5 UI тестов на поиск ошибок', async () => {
