@@ -1,0 +1,19 @@
+ { "base": {
+    "logo": "",
+    "project": "JS QA GURU",
+    "environment": "some env",
+    "comment": "",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "allure-report",
+    "enableChart": false,
+    "enableSuitesPublishing": false,
+    "customData": {}
+  },
+  "telegram": {
+   "token": "${TG_BOT_TOKEN}",
+    "chat": "${TG_CHAT_ID}",
+    "topic": "",
+    "replyTo": ""
+  }
+}
